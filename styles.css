@@ -196,7 +196,7 @@ p b {
   padding: 14px 14px 7px;
   min-height: 184px;
   width: 100%;
-  background: url("/images/baground_summary.png") no-repeat center;
+  background: url("./images/baground_summary.png") no-repeat center;
   background-size: cover;
 
 }
