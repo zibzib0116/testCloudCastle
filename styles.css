@@ -34,19 +34,24 @@
 //-----------------------------------------
 */
 
-html, body,ul {
+html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  letter-spacing: -0.01em;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font: 300 20px/1.16 'Inter';
   color: #000;
   min-height: 100%;
-  height: auto !important;
-  height: 100%;
+
   background: #fff;
   -webkit-text-size-adjust: 100%;
 }
@@ -99,14 +104,14 @@ p b {
 .list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
   list-style: none;
+  margin: -3px;
 }
 
 .item {
   display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 3px;
 }
 
 .button {
@@ -132,6 +137,7 @@ p b {
 
 .button:disabled {
   opacity: 0.5;
+  cursor: auto;
 }
 
 .title {
@@ -192,18 +198,17 @@ p b {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* раздвигает заголовок и описание: один вверху, другой внизу */
-  border: 4px solid #be955b;
+  border: 3px solid #be955b;
   padding: 14px 14px 7px;
   min-height: 184px;
   width: 100%;
-  background: url("./images/baground_summary.png") no-repeat center;
-  background-size: cover;
+  background: url("./images/baground_summary.png") no-repeat center/auto 227px;
 
 }
 .summary__list{
   position: absolute;        /* вырываем из потока */
   top: 50%;                  /* привязываем к середине по вертикали */
-  right: 14px;               /* отступ от правого края (как у родительского padding) */
+  right: 13px;
   transform: translateY(-50%); /* точное центрирование по вертикали */
   display: flex;
   flex-direction: column;
@@ -211,8 +216,7 @@ p b {
   justify-content: center;
   gap: 4px;
   list-style: none;
-  margin: 0;
-  padding: 0;
+
 }
 
 .summary::before {
@@ -232,8 +236,8 @@ p b {
   transform: translateY(-50%);
   height: 1px;
   background-color: #be955b;
-  width: 70%;
-  margin: auto;
+  width:  75%;
+  left: 16px;
 }
 
 
@@ -243,6 +247,7 @@ p b {
   font-size: 18px;
   color: #fff;
   align-self: flex-start;
+  letter-spacing: -0.05em;
 }
 
 .blur{
@@ -257,6 +262,7 @@ p b {
   font-size: 17px;
   color: #fff;
   padding: 10px 8px 10px 7px;
+  letter-spacing: -0.07em;
 }
 .summary__item{
   display: flex;
@@ -274,6 +280,9 @@ p b {
   }
   .item:nth-child(6n+6) {
     margin-left: 50%;
+  }
+  .summary__list{
+    right: 20px;
   }
   .summary__item{
     width: 24px;
@@ -298,11 +307,11 @@ p b {
   }
 
   .list {
-    margin: -6px;
+    margin: -10px;
   }
 
   .item {
-    padding: 6px;
+    padding: 10px;
   }
 
   .button {
@@ -324,6 +333,14 @@ p b {
   .check {
     top: 9px;
     right: 9px;
+  }
+  .summary{
+    border-width: 4px;
+  }
+  .summary::after {
+    max-width: 345px;
+    left: 23px;
+
   }
   .summary::before{
     width: 36px;
@@ -362,6 +379,9 @@ p b {
   .summary{
     height: 259px;
 
+  }
+  .summary__list{
+    right: 23px;
   }
 
   .summary__item{
@@ -403,6 +423,10 @@ p b {
     width: 24px;
     height: 15px;
   }
+  .summary{
+    background-size: auto 295px;
+
+  }
 }
 
 @media (min-width: 1900px) {
@@ -415,10 +439,11 @@ p b {
   .description {
     margin: 0 0 80px;
     font-size: 47px;
+    text-indent: 640px;
   }
 
   .item {
-    width: 25%;
+    width: 25% ;
   }
 
   .item:nth-child(5n + 2) {
@@ -448,7 +473,9 @@ p b {
   .summary__description,.params_type {
     font-size: 24px;
   }
-
+  .summary__list{
+    right: 23px;
+  }
 
   .params {
     font-size: 24px;
@@ -459,5 +486,9 @@ p b {
   .check {
     width: 49px;
     height: 49px;
+  }
+  .summary{
+    background-size: auto 295px;
+
   }
 }
