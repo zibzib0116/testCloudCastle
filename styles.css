@@ -199,8 +199,8 @@ p b {
   flex-direction: column;
   justify-content: space-between; /* раздвигает заголовок и описание: один вверху, другой внизу */
   border: 3px solid #be955b;
-  padding: 14px 14px 7px;
   min-height: 184px;
+  padding: 14px 13px 7px;
   width: 100%;
   background: url("./images/baground_summary.png") no-repeat center/auto 227px;
 
@@ -336,6 +336,8 @@ p b {
   }
   .summary{
     border-width: 4px;
+    padding: 15px 16px 9px;
+
   }
   .summary::after {
     max-width: 345px;
@@ -378,6 +380,9 @@ p b {
   }
   .summary{
     height: 259px;
+    padding: 20px 23px 18px;
+    background-size: auto 295px;
+
 
   }
   .summary__list{
@@ -423,10 +428,7 @@ p b {
     width: 24px;
     height: 15px;
   }
-  .summary{
-    background-size: auto 295px;
 
-  }
 }
 
 @media (min-width: 1900px) {
@@ -489,6 +491,8 @@ p b {
   }
   .summary{
     background-size: auto 295px;
+    padding: 19px 23px 15px;
+
 
   }
 }
